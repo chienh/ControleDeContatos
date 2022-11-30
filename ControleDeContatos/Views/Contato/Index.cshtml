@@ -4,11 +4,19 @@
     ViewData["Title"] = "Listagem de Contatos";
 }
 
-@{
-    ViewData["Title"] = "Listagem de Contatos";
-}
-
 <h1>Listagem de Contatos</h1>
+<div class="alert alert-success" role="alert">
+    <button type="button" class="btn btn-success btn-sm close-alert" aria-label="Close">X</button>
+    A simple success alert—check it out!
+</div>
+
+<div class="alert alert-danger" role="alert">
+
+    <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+    A simple danger alert—check it out!
+</div>
+
+
 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
     <a class="btn btn-primary" asp-controller="Contato" asp-action="Criar" role="button">Adicionar novo contato</a>
 </div>
@@ -32,14 +40,14 @@
            foreach (ContatoModel contato in Model)
             {
                 <tr>
-                    <th scope="row">@contato.ID</th>
+                    <th scope="row">@contato.Id</th>
                     <td>@contato.Nome</td>
                     <td>@contato.Email</td>
                     <td>@contato.Celular</td>
                     <td>
                         <div class="btn-group" role="button">
-                            <a role="button" class="btn btn-primary" asp-controller="Contato" asp-route-id="@contato.ID" asp-action="Editar">Editar</a>
-                            <a role="button" class="btn btn-danger" asp-controller="Contato" asp-route-id="@contato.ID" asp-action="ApagarConfirmacao">Apagar</a>
+                            <a role="button" class="btn btn-primary" asp-controller="Contato" asp-route-id="@contato.Id" asp-action="Editar">Editar</a>
+                            <a role="button" class="btn btn-danger" asp-controller="Contato" asp-route-id="@contato.Id" asp-action="ApagarConfirmacao">Apagar</a>
 
                         </div>
                     </td>
