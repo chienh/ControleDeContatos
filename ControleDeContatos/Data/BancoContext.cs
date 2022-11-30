@@ -15,5 +15,6 @@ namespace ControleDeContatos.Data
         //Classe ContatoModel servirá de base
 
         public DbSet<ContatoModel> Contatos { get; set; }
+        public DbSet<UsuarioModel> Usuarios { get; set; }
     }
 }
